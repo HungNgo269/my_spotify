@@ -1,8 +1,14 @@
-function App() {
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './routes/Home'
+
+const App: React.FC = () => {
   return (
-    <>
-      <h1>Vite + React</h1>
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </Router>
   )
 }
 
