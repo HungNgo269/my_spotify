@@ -1,16 +1,16 @@
 import React from 'react'
+import Content from '../../features/User/components/Content'
 
 interface Props {
   propName?: string
 }
 
-const ComponentName: React.FC<Props> = ({ propName }) => {
+const HomePage: React.FC<Props> = ({ propName }) => {
   return (
-    <div>
-      <h1>{propName}</h1>
-      <h2>Home</h2>
+    <div className='flex h-full w-full'>
+      <Content></Content>
     </div>
   )
 }
 
-export default ComponentName
+export default HomePage
