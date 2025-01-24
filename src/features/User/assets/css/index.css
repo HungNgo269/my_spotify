@@ -1,0 +1,11 @@
+.header_container {
+  background-color: #000;
+  height: calc(48px + var(--panel-gap) * 2);
+  margin: calc(var(--panel-gap) * -1);
+  padding: calc(var(--panel-gap));
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

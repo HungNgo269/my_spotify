@@ -1,3 +1,101 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--text-base);
+} /*16px*/
+html,
+body,
+#root {
+  height: 100%;
+}
+:root {
+  /* colors */
+  --black-0: #000;
+  --gray-0: #121212;
+  --gray-10: #1f1f1f;
+  --white-0: #ffffff;
+  --white-10: #fff;
+
+  /* font */
+  font-family: sans-serif;
+  --font-size: 1rem;
+  --font-size-larger: 1.5rem;
+  --font-size-smaller: 0.875rem;
+  --font-size-smallest: 0.6875rem;
+  /* text */
+  --text-base: var(--white-10);
+  /* background */
+  --background-color: var(--black-0);
+  --background-color-secondary: var(--gray-0);
+  --background-color-light: var(--gray-10);
+  --white: var(--white-0);
+  /* border */
+  --background-secondary-color: var(--white);
+  --text-secondary-color: var(--grey-500);
+  /* gap */
+  --panel-gap: 0.5rem;
+  /* button */
+  --size-button: 48px;
+}
+
+.dark-theme {
+  --text-color: var(--dark-mode-text-color);
+  --background-color: var(--dark-mode-bg-color);
+  --text-secondary-color: var(--dark-mode-text-secondary-color);
+  --background-secondary-color: var(--dark-mode-bg-secondary-color);
+}
+
+.button_hover {
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+}
+
+.button_hover:hover {
+  scale: 1.04;
+}
+
+.container_sub {
+  color: var(--text-base);
+  background-color: var(--background-color-secondary);
+  font-size: var(--font-size);
+  min-block-size: var(--size-button, 48px);
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+}
+.sidebar {
+  height: inherit;
+  width: 240px;
+  max-width: 360px;
+  min-width: 120px;
+  min-height: 0;
+}
+
+/* text */
+.text {
+  font-size: var(--font-size);
+  color: var(--text-base);
+}
+.smallText {
+  font-size: var(--font-size-smaller);
+  color: var(--text-secondary-color);
+}
+.smallestText {
+  font-size: var(--font-size-smallest);
+  color: var(--text-secondary-color);
+}
+.largeText {
+  font-size: var(--font-size-larger);
+  color: var(--text-base);
+}
