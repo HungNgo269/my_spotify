@@ -1,0 +1,9 @@
+export const albumsID = [
+  '4eLPsYPBmXABThSJ821sqY',
+  '4eLPsYPBmXABThSJ821sqY',
+  '4eLPsYPBmXABThSJ821sqY',
+  '4eLPsYPBmXABThSJ821sqY',
+  '4eLPsYPBmXABThSJ821sqY',
+  '4eLPsYPBmXABThSJ821sqY',
+  '4eLPsYPBmXABThSJ821sqY'
+]
