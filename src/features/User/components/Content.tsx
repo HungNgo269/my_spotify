@@ -1,6 +1,6 @@
 import React from 'react'
 import FooterContent from './FooterContent'
-import MusicCart from './MusicCart'
+import Cart from './Cart'
 interface Props {
   propName?: string
 }
@@ -8,7 +8,8 @@ interface Props {
 const Content: React.FC<Props> = ({ propName }) => {
   return (
     <div className='container_sub overflow-auto w-full rounded-lg'>
-      <MusicCart Title='Nghệ sĩ phổ biến' itemList={[]}></MusicCart>
+      <Cart Title='Nghệ sĩ phổ biến'></Cart>
+
       <FooterContent></FooterContent>
     </div>
   )

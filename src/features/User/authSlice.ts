@@ -19,11 +19,13 @@ const initialState: AuthState = {
   loginStatus: 'idle',
   error: null
 }
-
+//createAsyncThunk là middleware, Nó tự động tạo ra các action types
+//và action creators cho các trạng thái khác nhau của tác vụ bất đồng bộ: pending, fulfilled, và rejected.
+//tham số đầu: 1 string định danh. tham số 2, 1 hàm bất đồng bộ
 export const setTokensFromUrl = createAsyncThunk<
   { access_token: string; refresh_token: string; expires_in: number },
   { accessToken: string; refreshToken: string; expiresIn: number }
->('auth/setTokensFromUrl', async (payload, thunkAPI) => {
+>('auth/setTokensFromUrl', async (payload) => {
   return {
     access_token: payload.accessToken,
     refresh_token: payload.refreshToken,
@@ -48,7 +50,6 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    // Action logout đồng bộ
     logout(state) {
       state.accessToken = null
       state.refreshToken = null
@@ -58,7 +59,6 @@ const authSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
-    // (A) setTokensFromUrl
     builder
       .addCase(setTokensFromUrl.pending, (state) => {
         state.loginStatus = 'loading'
@@ -78,7 +78,6 @@ const authSlice = createSlice({
         state.error = action.error.message ?? 'Cannot set tokens from URL'
       })
 
-    // (B) refreshAccessToken
     builder
       .addCase(refreshAccessToken.pending, (state) => {
         state.loginStatus = 'loading'

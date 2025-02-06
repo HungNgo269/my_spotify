@@ -23,5 +23,6 @@ const tokenApi = {
       throw error
     }
   }
+  getRefreshToken:async(grant_type:string,refresh_token:string,client_id:string)
 }
 export default tokenApi
