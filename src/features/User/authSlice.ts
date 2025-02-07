@@ -3,7 +3,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
 import axios from 'axios'
 import type { RootState } from '../../stores/store'
-
+import Cookies, { Cookie } from 'universal-cookie'
 interface AuthState {
   accessToken: string | null
   refreshToken: string | null

@@ -20,10 +20,11 @@ const MainLayout: React.FC<Props> = ({}) => {
       </div>
       <>
         <Allotment className='grid grid-cols-[250px,1fr] h-full w-full'>
-          <Allotment.Pane minSize={280} maxSize={420}>
+          <Allotment.Pane minSize={280} maxSize={420} preferredSize={300}>
             <SideBar></SideBar>
           </Allotment.Pane>
-          <Allotment.Pane snap>
+
+          <Allotment.Pane minSize={300} visible={true}>
             <Outlet></Outlet>
           </Allotment.Pane>
         </Allotment>

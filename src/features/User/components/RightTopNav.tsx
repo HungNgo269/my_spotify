@@ -1,6 +1,6 @@
 import ButtonHover from '../../../components/common/ButtonHover'
-import { store } from '../../../stores/store'
-const LoginRegister = () => {
+import authSlice from '../authSlice'
+const RightTopNav = () => {
   const handleButtonClick = () => {
     alert('Button clicked!')
   }
@@ -10,11 +10,10 @@ const LoginRegister = () => {
   }
   return (
     <div className='flex flex-row justify-center items-center'>
-      {}
       <ButtonHover size='48px' text='Đăng ký' background='black' onClick={handleButtonClick} />
       <ButtonHover size='48px' text='Đăng nhập' onClick={handleLoginWithSpotify} />
     </div>
   )
 }
 
-export default LoginRegister
+export default RightTopNav

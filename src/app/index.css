@@ -34,6 +34,7 @@ body,
   --font-size-smallest: 0.6875rem;
   /* text */
   --text-base: var(--white-10);
+  --text-secondary-color: #656565;
   /* background */
   --background-color: var(--black-0);
   --background-color-secondary: var(--gray-0);
@@ -41,7 +42,7 @@ body,
   --white: var(--white-0);
   /* border */
   --background-secondary-color: var(--white);
-  --text-secondary-color: var(--grey-500);
+
   /* gap */
   --panel-gap: 0.5rem;
   /* button */
@@ -99,3 +100,10 @@ body,
   font-size: var(--font-size-larger);
   color: var(--text-base);
 }
+/* thanh kéo 
+.sash {
+  background-color: transparent !important; 
+  width: 50px !important; 
+  cursor: col-resize;
+}
+*/
