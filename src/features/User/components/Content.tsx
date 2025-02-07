@@ -7,7 +7,7 @@ interface Props {
 
 const Content: React.FC<Props> = ({ propName }) => {
   return (
-    <div className='container_sub overflow-auto w-full rounded-lg px-6'>
+    <div className='container_sub overflow-y-auto overflow-x-hidden w-full rounded-lg px-6'>
       <Cart Title='Nghệ sĩ phổ biến' Shape='rounded'></Cart>
       <Cart Title='Album và đĩa đơn nổi tiếng' Shape='squared'></Cart>
       <Cart Title='Radio nổi tiếng' Shape='squared'></Cart>

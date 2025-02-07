@@ -30,7 +30,7 @@ const HomePage: React.FC<Props> = ({ propName }) => {
     }
   }, [dispatch])
   return (
-    <div className='flex h-full w-full'>
+    <div className='flex h-full w-full overflow-x-visible'>
       <Content></Content>
     </div>
   )

@@ -61,12 +61,23 @@ const Cart: React.FC<Props> = ({ Title, Shape }) => {
           {itemList &&
             Array.isArray(itemList) &&
             itemList.map((item: any) => (
-              <div key={item.id} className='flex flex-col p-3 justify-between items-start'>
-                <img
-                  src={item.images[0].url}
-                  alt='cart'
-                  className={`min-w-32 min-h-32 max-w-32 max-h-32 ${Shape === 'squared' ? 'rounded-md' : 'rounded-full'}`}
-                />
+              <div
+                key={item.id}
+                className='flex flex-col p-3 justify-between items-start relative transition card rounded-md cursor-pointer'
+              >
+                <div className='image-container'>
+                  <img
+                    src={item.images[0].url}
+                    alt='cart'
+                    className={`min-w-32 min-h-32 max-w-32 max-h-32 ${Shape === 'squared' ? 'rounded-md' : 'rounded-full'}`}
+                  />
+                  <div className='overlay'></div>
+                  <button className='play-button'>
+                    <svg viewBox='0 0 24 24' width='32' height='32'>
+                      <path fill='black' d='M8 5v14l11-7z' />
+                    </svg>
+                  </button>
+                </div>
                 <span className='text font-bold'>{item.name}</span>
                 <span className='smallText font-bold'>{item.type}</span>
               </div>

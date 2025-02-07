@@ -7,7 +7,6 @@ const SpotifyApi = axios.create({
     'Content-Type': 'application/json'
   }
 })
-//thêm accesstoken vào trc khi request
 SpotifyApi.interceptors.request.use(
   (config) => {
     const accessToken = store.getState().auth.accessToken
